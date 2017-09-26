@@ -53,6 +53,10 @@ paginate = 10
 		title = "xaviablaza's GCash PHP Anchor for the Stellar Network"
 		content = "This anchor is a proof of concept for PHPG credit to be issued and exchanged on the Stellar network. Hopefully, we can make our e-money systems in the Philippines more interoperable."
 
+    [params.anchor_info]
+        hide = false
+        trust = "First you must set trustline for asset `PHPG` to account: `GA6GSZXUNBEK6QUMXRTJ64T76MI2RL7M3CQUDSJB5FAHBKLQIDHN2RCO`"
+
 
 	[params.portfolio]
 		hide  = true

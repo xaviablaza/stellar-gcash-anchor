@@ -3,6 +3,10 @@
 		{{ partial "about" . }}
 	{{ end }}
 
+	{{ if not .Site.Params.anchor_info.hide }}
+		{{ partial "anchor_info" . }}
+	{{ end }}
+
 	{{ if not .Site.Params.portfolio.hide }}
 		{{ partial "portfolio" . }}
 	{{ end }}

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<section>
+    <h3>1. Trust</h3>
+    {{ with .Site.Params.anchor_info.trust }}<p>{{ . | markdownify }}</p>{{ end }}
+</section>
