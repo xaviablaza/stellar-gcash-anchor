@@ -1,5 +1,5 @@
 publishDir = "docs"
-baseurl = "https://example.org/"
+baseurl = "https://xaviablaza.github.io/stellar-gcash-anchor/"
 languageCode = "en-us"
 title = "Strata"
 theme = "hugo-strata-theme"
