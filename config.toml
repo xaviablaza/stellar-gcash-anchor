@@ -1,7 +1,7 @@
 publishDir = "docs"
 baseurl = "https://xaviablaza.github.io/stellar-gcash-anchor/"
 languageCode = "en-us"
-title = "Strata"
+title = "GCash Anchor for Stellar Network"
 theme = "hugo-strata-theme"
 disqusShortname = "spf13"
 # Enable Google Analytics by inserting your tracking code
@@ -12,8 +12,8 @@ paginate = 10
 [params]
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
-	name = "Your name"
-	description = "Describe your website"
+	name = "Xavi Ablaza"
+	description = "GCash Anchor for the Stellar Network"
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
@@ -30,19 +30,19 @@ paginate = 10
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**I'm Strata**, a super simple<br> responsive site template freebie<br> crafted by [HTML5 UP](//html5up.net)."
+		bio = "**I'm Xavi Ablaza**, and I'm trying<br>to make a GCash Anchor<br>for the [Stellar Network](https://stellar.org)."
 		# The icons will be shown if you enter your username
-		twitter = "spf13"
-		github = "spf13"
-		gitlab = "spf13"
+		twitter = ""
+		github = "xaviablaza"
+		gitlab = ""
 		dribbble = ""
-		facebook = ""
+		facebook = "xlablaza"
 		googleplus = ""
 		flickr = ""
-		linkedin = ""
+		linkedin = "xaviablaza"
 
 		copyright = [
-			"&copy; John Doe",
+			"&copy; Xavi Ablaza 2017",
 			"Design: [HTML5 UP](//html5up.net)",
 			"Demo Images: [Unsplash](//unsplash.com/)"
 		]
@@ -50,12 +50,12 @@ paginate = 10
 
 	[params.about]
 		hide  = false
-		title = "Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque."
-		content = "Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia."
+		title = "xaviablaza's GCash PHP Anchor for the Stellar Network"
+		content = "This anchor is a proof of concept for PHPG credit to be issued and exchanged on the Stellar network. Hopefully, we can make our e-money systems in the Philippines more interoperable."
 
 
 	[params.portfolio]
-		hide  = false
+		hide  = true
 		title = "Recent Work"
 
 		# The images and thumbnails are stored under static/images
@@ -97,22 +97,23 @@ paginate = 10
 			description = "Lorem ipsum dolor sit amet."
 
 	[params.recentposts]
-		hide  = false
+		hide  = true
 		title = "Recent blog posts"
 
 	[params.contact]
 		hide  = false
 		title = "Get In Touch"
-		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
+		content = "You can reach out to me through email if you have any questions or concerns."
 
 		# This can be exact coordinates or a searchable address in google maps
-		gmaps_address = "39.7889055,-120.5443524"
+		gmaps_address = "33.792826,-117.8519811"
 		address = [
-			"1234 Somewhere Rd.",
-			"Nashville, TN 00000",
+			"1 University Dr.",
+			"Attn: Argyros Forum 303",
+			"Orange, CA 92866",
 			"United States"
 		]
-		phone = "000-000-0000"
+		phone = "714-588-7523"
 
 		# Since this template is static, the contact form uses www.formspree.io as a
 		# proxy. The form makes a POST request to their servers to send the actual
@@ -125,7 +126,7 @@ paginate = 10
 	    # - send a dummy email yourself to confirm your account
 	    # - click the confirm link in the email from www.formspree.io
 	    # - you're done. Happy mailing!
-		email = "hello@example.com"
+		email = "xlablaza@gmail.com"
 
 		[params.contact.form]
 			# Set custom strings for the form if your native
@@ -137,12 +138,12 @@ paginate = 10
 
 
 # Menu links that appear on the left sidebar
-[[menu.main]]
-	name = "Home"
-	url  = "/"
-	weight = 10
-
-[[menu.main]]
-	name = "Blog"
-	url  = "post/"
-	weight = 0
+#[[menu.main]]
+#	name = "Home"
+#	url  = "/"
+#	weight = 10
+#
+#[[menu.main]]
+#	name = "Blog"
+#	url  = "post/"
+#	weight = 0
