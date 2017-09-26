@@ -25,12 +25,15 @@ paginate = 10
 	custom_js   = []
 	custom_css  = []
 
+	[params.rss]
+		hide = true
+
 
 	[params.sidebar]
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**I'm Xavi Ablaza**, and I'm trying<br>to make a GCash Anchor<br>for the [Stellar Network](https://stellar.org)."
+		bio = "**I'm Xavi Ablaza**, and I'm trying<br> to make a GCash Anchor<br> for the [Stellar Network](https://stellar.org)."
 		# The icons will be shown if you enter your username
 		twitter = ""
 		github = "xaviablaza"
