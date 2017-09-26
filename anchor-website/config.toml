@@ -1,3 +1,4 @@
+publishDir = "docs"
 baseurl = "https://example.org/"
 languageCode = "en-us"
 title = "Strata"
