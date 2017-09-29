@@ -8,7 +8,8 @@ GCash Anchor for the Stellar Network
 2. Receive a phone number from issuer to send your GCash to
   - We need additional verification to prove the phone number is correct - person should send a text message with their public address to the number given by the issuer. This is because GCash that is sent to a personal address is confirmed in the following format:
   ```
-  You have received P500.00 of GCash from DEPOSITER'S NAME. Your new balance is P500.00 09-29-17 07:49AM Ref. No. XXXXXXXXX.
+  You have received P500.00 of GCash from DEPOSITER'S NAME.
+  Your new balance is P500.00 09-29-17 07:49AM Ref. No. XXXXXXXXX.
   ```
   The issuer does not receive the person's phone number when receiving GCash so we would need to verify the number through the SMS channel
   - One individual phone number per GCASH account (100k limit)?
