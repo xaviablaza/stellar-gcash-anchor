@@ -3,15 +3,17 @@ GCash Anchor for the Stellar Network
 
 ## How it Works (testnet)
 
-1. Add a trustline for asset PHP to issuing account GBEAEXVL27YDQIHGSLDA3F57BZB2E5KL5LK5DJRY62EEMV4I42HED2V7
-  - Transaction must have a memo that includes the person's GCASH cellphone number 09175431287
+1. Add a trustline (Stellar) for asset `PHP` to issuing account `GBEAEXVL27YDQIHGSLDA3F57BZB2E5KL5LK5DJRY62EEMV4I42HED2V7`
+  - Stellar transaction must have a memo that includes the person's GCASH cellphone number 09175431287
 2. Receive a phone number from issuer to send your GCash to
+  - To verify the number is correct, the person could send a text message with their public address to the number given by the issuer, but to even add a trustline in the first place implies that secret key is correct so number should also be correct, but just in case the person types the wrong number, this could be another channel to confirm that the number is correct
   - One individual phone number per GCASH account (100k limit)?
   - Watch for GCASH being sent from a recipient's phone number through a GSM receiver. Data should be broadcasted/published to prove that GCash has been sent to issuer
   - From the phone number that sent in the GCash, find the address associated with that phone number and fund its Stellar account
 3. To withdraw, send back PHP credit to issuer's account
   - Watch for PHP credit being received at issuing account
   - Disburse GCash to phone number associated with Stellar address that sent the PHP credit
+  - You could send to a federated address, but there is no guarantee that the address `09173819338*gcashanchor.com` is a GCASH KYC'd number, so perhaps it is best to send it directly back to the GCASH number used and let the person send the GCASH to the intended recipient
 
 ### Potential caveats
 
