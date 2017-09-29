@@ -20,5 +20,7 @@ GCash Anchor for the Stellar Network
 1. If there were official APIs that watched for transactions on the GCash network that would be interesting (instead of confirming transactions via SMS)
 2. Could potentially look into becoming a GCash merchant in order to bypass the 100k php credit per wallet and have all transactions go to the merchant account.
 3. If user does not have access to mobile number and they still have PHP credit, what happens?
+  - Federated address could perhaps work
+  - They register a new GCASH account, go through the trusting process, and send the GCASH to a new Stellar address
 4. Globe has a system wherein customers that send GCash to each other have already gone through the KYC process by Globe.
 5. Should there still be a KYC process for the Stellar network?
