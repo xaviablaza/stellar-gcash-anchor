@@ -6,7 +6,11 @@ GCash Anchor for the Stellar Network
 1. Add a trustline (Stellar) for asset `PHP` to issuing account `GBEAEXVL27YDQIHGSLDA3F57BZB2E5KL5LK5DJRY62EEMV4I42HED2V7`
   - Stellar transaction must have a memo that includes the person's GCASH cellphone number 09175431287
 2. Receive a phone number from issuer to send your GCash to
-  - To verify the number is correct, the person could send a text message with their public address to the number given by the issuer, but to even add a trustline in the first place implies that secret key is correct so number should also be correct, but just in case the person types the wrong number, this could be another channel to confirm that the number is correct
+  - We need additional verification to prove the phone number is correct - person should send a text message with their public address to the number given by the issuer. This is because GCash that is sent to a personal address is confirmed in the following format:
+  ```
+  You have received P500.00 of GCash from DEPOSITER'S NAME. Your new balance is P500.00 09-29-17 07:49AM Ref. No. XXXXXXXXX.
+  ```
+  The issuer does not receive the person's phone number when receiving GCash so we would need to verify the number through the SMS channel
   - One individual phone number per GCASH account (100k limit)?
   - Watch for GCASH being sent from a recipient's phone number through a GSM receiver. Data should be broadcasted/published to prove that GCash has been sent to issuer
   - From the phone number that sent in the GCash, find the address associated with that phone number and fund its Stellar account
