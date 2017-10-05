@@ -1,4 +1,16 @@
 <section>
     <h3>1. Trust</h3>
     {{ with .Site.Params.anchor_info.trust }}<p>{{ . | markdownify }}</p>{{ end }}
+    <h3>2. Request Cash-In</h3>
+    {{ with .Site.Params.anchor_info.cash_in }}<p>{{ . | markdownify }}</p>{{ end }}
+    <input name="phone-number" type="text" placeholder="Phone Number" required="">
+    <input name="gcash-deposit" type="text" placeholder="0" required="">
+    <button id="cashin-request" type="submit">SUBMIT</button>
+    <h3>3. Deposit GCash and confirm reference number</h3>
+    {{ with .Site.Params.anchor_info.deposit }}<p>{{ . | markdownify }}</p>{{ end }}
+    <input name="ref-no" type="text" placeholder="Reference Number" required="">
+    <button id="confirm-deposit" type="submit">CONFIRM</button>
+    Your Stellar address will be funded with PHP credit once you confirm your reference number.
+    <h3>4. Withdraw</h3>
+    {{ with .Site.Params.anchor_info.withdraw }}<p>{{ . | markdownify }}</p>{{ end }}
 </section>
