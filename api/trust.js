@@ -6,7 +6,7 @@ server.loadAccount(targetAccount)
             asset: new StellarSDK.Asset('PHP', 'GAGYUGOQSZMGQUZO35CJ4JUP2CJ65YWSWTDNYPCXOUDIF4JBD3E4EDEO'),
             limit: 100000,
         })
-            .build();
+        .build());
 
 transaction.sign(StellarSDK.Keypair.fromSecret(targetAccountSecret));
 return server.submitTransaction(transaction);

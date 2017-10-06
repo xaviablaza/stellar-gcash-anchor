@@ -60,7 +60,7 @@ paginate = 10
         hide = false
         trust = "Set trustline for asset `PHP` to account: `GAGYUGOQSZMGQUZO35CJ4JUP2CJ65YWSWTDNYPCXOUDIF4JBD3E4EDEO` and add your GCash phone number in the memo (e.g. `09178838668`)."
         cash_in = "Include your phone number and amount of GCash you would like to cash in below."
-        deposit = "Deposit the exact amount of GCash to `09178838668`. You will receive an SMS from `2882` with a reference number. Text the reference number you receive to `09178838668` or enter it below:"
+        deposit = "Deposit the exact amount of GCash to `09178838668`. You will receive an SMS from `2882` with a reference number. Text the reference number you receive to `09178838668`. Your Stellar address will be funded with PHP credit once you confirm your reference number."
         withdraw = "Send PHP assets to `0YourGCashNumber*gcash.corvidae.ph` and we will automatically send GCash to `0YourGCashNumber`. Ensure that the number is a valid GCash number. We record all withrawals once they are paid out. Deposits are also recorded once we receive and confirm its reference number."
 
 	[params.portfolio]
