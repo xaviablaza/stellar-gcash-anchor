@@ -24,6 +24,14 @@ app.post('/deposits', (req, res) => {
     });
 });
 
+app.get('/deposits', (req, res) => {
+    Deposit.find().then((deposits) => {
+        res.send({deposits});
+    }, (e) => {
+        res.status(400).send(e);
+    })
+});
+
 app.listen(3000, () => {
     console.log('Started on port 3000');
 });
