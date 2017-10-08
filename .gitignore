@@ -1,3 +1,4 @@
 /.idea
 issuing_account.txt
 .gitignore
+/api/node_modules
