@@ -1,14 +1,17 @@
 const expect = require('expect');
 const request = require('supertest');
+const {ObjectID} = require('mongodb');
 
 const {app} = require('./../server');
 const {Deposit} = require('./../models/deposit');
 
 const deposits = [{
+    _id: new ObjectID(),
     phone: '09178838668',
     amount: 8000.00,
     currency: 'GCASH'
 }, {
+    _id: new ObjectID(),
     phone: '09183365776',
     amount: 5000.00,
     currency: 'GCASH'
@@ -77,4 +80,34 @@ describe('GET /deposits', () => {
             })
             .end(done);
     })
+});
+
+describe('GET /deposits/:id', () => {
+   it('should return a deposit doc', (done) => {
+       request(app)
+           .get(`/deposits/${deposits[0]._id.toHexString()}`)
+           .expect(200)
+           .expect((res) => {
+                expect(res.body.deposit.phone).toBe(deposits[0].phone);
+                expect(res.body.deposit.amount).toBe(deposits[0].amount);
+                expect(res.body.deposit.currency).toBe(deposits[0].currency);
+           })
+           .end(done);
+   });
+
+   it('should return 404 if deposit not found', (done) => {
+      // make sure you get a 404 back
+      request(app)
+          .get(`/deposits/${new ObjectID().toHexString()}`)
+          .expect(404)
+          .end(done);
+   });
+
+   it('should return 404 for non-object ids', (done) => {
+      // /todos/123
+       request(app)
+           .get('/deposits/123')
+           .expect(404)
+           .end(done);
+   });
 });

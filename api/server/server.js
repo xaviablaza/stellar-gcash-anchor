@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var {mongoose} = require('./db/mongoose');
 var {Deposit} = require('./models/deposit');
 
+var {ObjectID} = require('mongodb');
+
 var app = express();
 
 app.use(bodyParser.json());
@@ -29,7 +31,24 @@ app.get('/deposits', (req, res) => {
         res.send({deposits});
     }, (e) => {
         res.status(400).send(e);
-    })
+    });
+});
+
+app.get('/deposits/:id', (req, res) => {
+    var id = req.params.id;
+    // Validate id using isValid
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send();
+    }
+    // Query the database
+    Deposit.findById(id).then((deposit) => {
+        if (!deposit) {
+            return res.status(404).send();
+        }
+        res.send({deposit});
+    }, (e) => {
+        res.status(400).send();
+    });
 });
 
 app.listen(3000, () => {
