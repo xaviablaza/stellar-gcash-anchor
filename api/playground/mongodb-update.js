@@ -8,13 +8,17 @@ MongoClient.connect('mongodb://localhost:27017/GCashApp', (err, db) => {
     }
     console.log('Connected to MongoDB server');
 
-    db.collection('CashInRequests').find({
-        _id: new ObjectID("59d962c7271bd10f74b6c620")
-    }).toArray().then((docs) => {
-        console.log('CashInRequests');
-        console.log(JSON.stringify(docs, undefined, 2));
-    }, (err) => {
-        console.log('Unable to fetch CashInRequests', err);
+    db.collection('CashInRequests').findOneAndUpdate({
+        _id: new ObjectID('59d962c7271bd10f74b6c620')
+    }, {
+        $set: {
+            currency: 'GCASH',
+            status: 'success'
+        }
+    }, {
+        returnOriginal: false
+    }).then((result) => {
+        console.log(result);
     });
 
     // db.close();
