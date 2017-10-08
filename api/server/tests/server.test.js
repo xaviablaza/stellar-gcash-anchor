@@ -4,8 +4,20 @@ const request = require('supertest');
 const {app} = require('./../server');
 const {Deposit} = require('./../models/deposit');
 
+const deposits = [{
+    phone: '09178838668',
+    amount: 8000.00,
+    currency: 'GCASH'
+}, {
+    phone: '09183365776',
+    amount: 5000.00,
+    currency: 'GCASH'
+}];
+
 beforeEach((done) => {
-    Deposit.remove({}).then(() => done());
+    Deposit.remove({}).then(() => {
+        return Deposit.insertMany(deposits);
+    }).then(() => done());
 });
 
 describe('POST /deposits', () => {
@@ -28,7 +40,7 @@ describe('POST /deposits', () => {
                    return done(err);
                }
 
-               Deposit.find().then((deposits) => {
+               Deposit.find({phone, amount, currency}).then((deposits) => {
                    expect(deposits.length).toBe(1);
                    expect(deposits[0].phone).toBe(phone);
                    expect(deposits[0].amount).toBe(amount);
@@ -48,9 +60,21 @@ describe('POST /deposits', () => {
                    return done(err);
                }
                Deposit.find().then((deposits) => {
-                   expect(deposits.length).toBe(0);
+                   expect(deposits.length).toBe(2);
                    done();
                }).catch((e) => done(e));
            });
     });
+});
+
+describe('GET /deposits', () => {
+    it('should get all deposits', (done) => {
+        request(app)
+            .get('/deposits')
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.deposits.length).toBe(2);
+            })
+            .end(done);
+    })
 });
