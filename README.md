@@ -3,15 +3,14 @@ GCash Anchor for the Stellar Network
 
 ## Workflow
 
-1. A trustline for PHP must be added for issuing account's Stellar address. Customer must have Stellar wallet with 50XLM.
-2. Trustline must have memo with cellphone number.
-3. Merchant now has the customer's stellar address and depositor's phone number.
-4. Customer requests for a cash-in of GCASH amount and provides phone number.
-5. GCash is sent to merchant's number and a reference number is generated.
-6. Customer confirms reference number by sending a text message with reference number to merchant from phone number.
-7. Merchant posts: date, value of gcash, stellar destination and reference no.
-8. Merchant finds stellar address in database from number from cash-in request (step 4)
-9. Merchant funds stellar address.
+1. A trustline for PHP is created from the Customer's stellar account to the Merchant (issuer)'s account. The Customer must have a stellar account funded with at least 31 XLM to fulfill the [minimum balance requirements](https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance).
+2. Once the trustline is created, the Customer executes an HTTP request that includes the stellar account address, GCASH phone number, and an optional memo on the website.
+3. Customer requests for a cash-in of GCASH amount and provides the GCASH phone number on the website.
+4. GCash is sent to merchant's number and a reference number from Globe is generated.
+5. Customer confirms reference number by sending a text message with reference number to merchant from GCASH phone number.
+6. Merchant posts: date, value of gcash, stellar destination and reference no.
+7. Merchant finds stellar address in database from number from cash-in request
+8. Merchant funds stellar address.
 
 ## How it Works (testnet)
 
